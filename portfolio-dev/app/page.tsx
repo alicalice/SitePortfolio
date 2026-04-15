@@ -2,6 +2,10 @@ import Image from "next/image";
 import imagem from "../public/Frieren.jpg"
 import { projects } from "@/data/project";
 import ProjectCard from "./components/ProjectCard";
+import Skills from "./components/Skills";
+import Experience from "./components/Experience";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -34,10 +38,10 @@ export default function Home() {
 
 
 
-    <section className="max-w-6x1 mx-auto px-6 py-16">
+    <section className="max-w-6xl mx-auto px-6 py-16">
       
 
-      <h2 className="text-3x1 font-bold mb-10">Projetos:</h2>
+      <h2 className="text-3xl font-bold mb-10">Projetos:</h2>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project,index)=>(
@@ -52,7 +56,23 @@ export default function Home() {
 
     </section>
 
+    <section>
+      <Skills />
+    </section>
 
+    <section>
+      <Experience/>
+    </section>
+
+    <section>
+          <Contact />
+    </section>
+
+    <section>
+          <Footer />
+    </section>
+  
+    
 {/*
     <div className="flex mt-9 gap-4 mb-30 ml-25">
       <a href="" className="
