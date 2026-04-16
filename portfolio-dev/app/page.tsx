@@ -14,7 +14,7 @@ export default function Home() {
 
     
 
-    <div className="min-h-screen flex flex-col justify-between bg-linear-to-br from-[#0f0f14] via-[#151521] to-[#0f0f14] text-zinc-200 relative z-10">
+    <div className="min-h-screen flex flex-col justify-between text-zinc-200 relative z-10">
 
       <div className="absolute top-40 right-20 w-72 h-72 bg-purple-600/20 blur-[120px] rounded-full"></div>
 
@@ -33,7 +33,7 @@ export default function Home() {
       </div>
       <div>
         <Image
-        className="rounded-full shadow-[0_0_40px_rgba(124,58,237,0.5)] ring-2 ring-purple-500/30"
+        className="rounded-full shadow-[0_0_40px_rgba(124,58,237,0.5)] ring-2 ring-purple-500/30 hover:ring-purple-400 hover:shadow-[0_0_50px_rgba(168,85,247,0.6)] transition-all"
         src={imagem}
         alt="foto perfil"
         width={250}
@@ -54,7 +54,7 @@ export default function Home() {
 
       </h2>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="projetos">
         {projects.map((project,index)=>(
           <ProjectCard
           key={index}
@@ -67,19 +67,19 @@ export default function Home() {
 
     </section>
 
-    <section className="max-w-6xl mx-auto px-6 py-16">
+    <section className="max-w-6xl mx-auto px-6 py-16" id="skills">
       <Skills />
     </section>
 
-    <section className="max-w-6xl mx-auto px-6 py-16">
+    <section className="max-w-6xl mx-auto px-6 py-16" id="experiencia">
       <Experience/>
     </section>
 
-    <section className="max-w-6xl mx-auto px-6 py-16">
+    <section className="max-w-6xl mx-auto px-6 py-16" id="contato">
           <Contact />
     </section>
 
-    <section className="max-w-6xl mx-auto px-6 py-16">
+    <section className="max-w-6xl mx-auto px-6 py-16" id="rodape">
           <Footer />
     </section>
   
