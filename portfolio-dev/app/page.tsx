@@ -11,13 +11,20 @@ export default function Home() {
   return (
     <>
 
-    <div className="min-h-screen flex flex-col justify-between bg-linear-to-br from-[#0f0f14] via-[#1a1a2e] to-[#0f0f14] text-zinc-200">
+
+    
+
+    <div className="min-h-screen flex flex-col justify-between bg-linear-to-br from-[#0f0f14] via-[#151521] to-[#0f0f14] text-zinc-200 relative z-10">
+
+      <div className="absolute top-40 right-20 w-72 h-72 bg-purple-600/20 blur-[120px] rounded-full"></div>
 
 
-    <main className="flex items-center justify-around mt-30">
+
+
+    <main className="flex flex-col md:flex-row items-center justify-between gap-12 px-6 max-w-6xl mx-auto mt-24">
       <div className="max-w-xl space-y-6">
-          <h3 className="text-sm uppercase tracking-[0.2em] text-purple-400 font-mono">DESENVOLVEDORA FULL STACK</h3>
-          <h1 className="text-5xl md:text-7xl font-serif leading-tight tracking-tight">Alice Santos</h1>
+          <h3 className="text-sm uppercase tracking-[0.25em] text-purple-400 font-mono">DESENVOLVEDORA FULL STACK</h3>
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight">Alice Santos</h1>
           <p className="text-zinc-400 text-lg leading-relaxed max-w-md">
             Construo produtos web do zero — 
             desde a API até a interface. 
@@ -26,7 +33,7 @@ export default function Home() {
       </div>
       <div>
         <Image
-        className="rounded-full shadow-[0_0_40px_rgba(168,85,247,0.3)]"
+        className="rounded-full shadow-[0_0_40px_rgba(124,58,237,0.5)] ring-2 ring-purple-500/30"
         src={imagem}
         alt="foto perfil"
         width={250}
@@ -41,7 +48,11 @@ export default function Home() {
     <section className="max-w-6xl mx-auto px-6 py-16">
       
 
-      <h2 className="text-3xl font-bold mb-10">Projetos:</h2>
+      <h2 className="text-3xl font-bold mb-10 text-purple-400">
+
+        <span className="text-purple-400">Projetos</span>
+
+      </h2>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project,index)=>(
@@ -56,19 +67,19 @@ export default function Home() {
 
     </section>
 
-    <section>
+    <section className="max-w-6xl mx-auto px-6 py-16">
       <Skills />
     </section>
 
-    <section>
+    <section className="max-w-6xl mx-auto px-6 py-16">
       <Experience/>
     </section>
 
-    <section>
+    <section className="max-w-6xl mx-auto px-6 py-16">
           <Contact />
     </section>
 
-    <section>
+    <section className="max-w-6xl mx-auto px-6 py-16">
           <Footer />
     </section>
   
@@ -77,11 +88,11 @@ export default function Home() {
     <div className="flex mt-9 gap-4 mb-30 ml-25">
       <a href="" className="
         px-6 py-3
-      bg-purple-700
+      bg-purple-600
       text-white
         font-semibold
         rounded-lg
-      hover:bg-purple-600
+      hover:bg-purple-500
         transition
         hover:shadow-[0_0_20px_rgba(168,85,247,0.2)]
       ">
