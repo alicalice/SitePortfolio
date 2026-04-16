@@ -2,12 +2,14 @@ type ProjectProps = {
     title:string
     description:string
     techs:string[]
+    github:string
 }
 
 export default function ProjectCard({
     title,
     description,
-    techs
+    techs,
+    github
     }:ProjectProps) {
 
     return(
@@ -20,7 +22,7 @@ export default function ProjectCard({
             p-6
             transition-all duration-300
             hover:border-purple-500/40
-            hhover:shadow-[0_0_25px_rgba(124,58,237,0.25)]
+            hover:shadow-[0_0_25px_rgba(124,58,237,0.25)]
             hover:scale-[1.02]">
 
             <h3 className="text-lg font-semibold text-zinc-100 group-hover:text-purple-300 transition-colors">{title}</h3>
@@ -39,6 +41,8 @@ export default function ProjectCard({
 
             ))}
             </div>
+
+            <a href={github} target="_blank" className="text-purple-500 hover:underline">{github}</a>
         </div>
     )
 }
