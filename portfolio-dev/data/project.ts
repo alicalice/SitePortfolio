@@ -4,16 +4,13 @@ export const projects = [
     {
     title:"Software Estoque",
     description:"Software de estoque com backend e frontend.",
-    techs:["Nest.js","Next.js","typeORM", "MySQL"]
+    techs:["Nest.js","Next.js","typeORM", "MySQL"],
+    github:"https://github.com/alicalice/Estoque-App"
 },
 {
-    title:"Calculadora",
-    description:"Software Calculadora",
-    techs:["Next.js","HTML","JavaScript","CSS"]
+    title:"Site Portfólio",
+    description:"Projeto inicial de site com meu portfólio.",
+    techs:["Next.js","HTML","TypeScript","Tailwind","React"],
+    github:"https://github.com/alicalice/SitePortfolio"
 },
-{
-    title:"Agendamento de Tarefas",
-    description:"Software Tarefas",
-    techs:["JavaScript","HTML","CSS"]
-}
 ]

@@ -1,3 +1,7 @@
+import { FaGithub } from "react-icons/fa"
+
+FaGithub
+
 type ProjectProps = {
     title:string
     description:string
@@ -16,6 +20,7 @@ export default function ProjectCard({
 
         <div className="
             group
+            flex flex-col h-full
             bg-[#151521]
             border border-purple-500/10
             rounded-xl
@@ -42,7 +47,23 @@ export default function ProjectCard({
             ))}
             </div>
 
-            <a href={github} target="_blank" className="text-purple-500 hover:underline">{github}</a>
+                <a
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                mt-auto
+                inline-block
+                text-zinc-400
+                hover:text-purple-400
+                transition-all duration-300
+                hover:scale-110
+                hover:drop-shadow-[0_0_10px_rgba(124,58,237,0.5)]">
+
+                    <FaGithub size={22} />
+
+                </a>
+
         </div>
     )
 }
