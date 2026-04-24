@@ -16,7 +16,7 @@ export default function Home() {
 
     <div className="min-h-screen flex flex-col justify-between text-zinc-200 relative z-10">
 
-      <div className="absolute top-40 right-20 w-72 h-72 bg-purple-600/20 blur-[120px] rounded-full"></div>
+      {/*<div className="absolute top-40 right-20 w-72 h-72 bg-purple-600/20 blur-[120px] rounded-full"></div>*/}
 
 
 
@@ -31,13 +31,20 @@ export default function Home() {
             Foco em código limpo, 
             UX que faz sentido e entregas que não travam.</p>
       </div>
-      <div>
+      <div className="w-96">
         <Image
-        className="rounded-full shadow-[0_0_40px_rgba(124,58,237,0.5)] ring-2 ring-purple-500/30 hover:ring-purple-400 hover:shadow-[0_0_50px_rgba(168,85,247,0.6)] transition-all"
+        className="rounded-full
+        w-full
+        h-auto
+        shadow-[0_0_40px_rgba(124,58,237,0.5)] 
+        ring-2 
+        ring-purple-500/30 
+        hover:ring-purple-400 
+        hover:shadow-[0_0_50px_rgba(168,85,247,0.6)] 
+        transition-all"
         src={imagem}
         alt="foto perfil"
-        width={250}
-        height={250}
+        priority
         />
       </div>
 

@@ -5,7 +5,7 @@ export default function Experience(){
 
 
             <div>{/*ITEM 1*/}
-                <div>
+                <div className="">
                     <span>
                         Nenhuma até agora :3
                     </span>

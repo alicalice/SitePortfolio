@@ -60,7 +60,7 @@ export default function ProjectCard({
                 hover:scale-110
                 hover:drop-shadow-[0_0_10px_rgba(124,58,237,0.5)]">
 
-                    <FaGithub size={22} />
+                    <FaGithub size={20} />
 
                 </a>
 
