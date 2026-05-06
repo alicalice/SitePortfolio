@@ -1,26 +1,84 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* base */
+  --bg-primary: #0f0f14;
+  --bg-mute: #1a1a2e;
 
+  /* texto */
+  --text-primary: #e4e4e7;
+  --text-mute: #a1a1aa;
+
+  /* identidade lilás */
+  --primary: #a78bfa;
+  --primary-soft:#c4b5fd;
+  --primary-strong: #8b5cf6;
+
+  /* glow */
+  --glow-color: 168, 85, 247;
+}
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg-primary: #0f0f14;
+    --text-primary: #e4e4e7;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  background: linear-gradient(
+    to bottom right,
+    var(--bg-primary),
+    var(--bg-mute),
+    var(--bg-primary)
+  );
+  background-attachment: fixed;
+}
+/*.container{
+
+}*/
+.profile-image{
+  width:100%;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid rgba(var(--glow-color),0.3);
+  box-shadow: 0 0 40px rgba(var(--glow-color), 0.35);
+  transition: 0.3s ease;
+}
+.profile-image:hover{
+  border-color:var(--primary);
+  box-shadow: 0 0 50px rgba(var(--glow-color), 0.55);
+}
+/*.card{
+
+}*/
+.text-brand{
+  color:var(--primary);
+}
+.text-brand-soft{
+  color:var(--primary-soft);
+}
+.text-brand-strong{
+  color:var(--primary-strong);
+}
+.text-muted{
+  color:var(--text-mute)
+}
+.border-primary {
+  border-color: var(--primary);
+}
+.glow {
+  box-shadow: 0 0 20px rgba(var(--glow-color), 0.15);
+  transition: box-shadow 0.3s ease;
+}
+.glow:hover {
+  box-shadow: 0 0 30px rgba(var(--glow-color), 0.35);
 }

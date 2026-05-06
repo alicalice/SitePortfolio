@@ -1,29 +1,18 @@
+import { skills } from "@/data/skills";
+
 export default function Skills(){
 
 
-    const skills = [
-        "Next.js",
-        "Nest.js",
-        "JavaScript",
-        "HTML",
-        "TypeScript",
-        "Mysql",
-        "React",
-        "Tailwind",
-        "Prisma",
-
-    ]
-
     return( 
         
-        <section className="mt-10">
-            <h2 className="text-3xl font-semibold mb-8">Skills</h2>
+        <section className="mt-10 max-w-6xl mx-auto px-6 py-16" id="skills">
+            <h2 className="text-brand-strong text-3xl font-semibold mb-8">Skills</h2>
             
             <div className="flex
             flex-wrap gap-4
             ">
                     {skills.map((skill)=>(
-                    <div key={skill} className="px-15 py-2 
+                    <div key={skill} className="px-4 py-2 
                     bg-purple-500/10 
                     rounded-lg 
                     border 
