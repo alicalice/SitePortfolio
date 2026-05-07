@@ -12,26 +12,19 @@ export default function Home() {
     <div className="min-h-screen relative z-10">
 
 
-    <main className="flex flex-col">
+    <main className="">
 
       <Hero />
 
       <Projects />
 
       <Skills />
-      <section className="max-w-6xl mx-auto px-6 py-16" id="experience">
-        <Experience/>
-      </section>
+      
+      <Experience/>
 
-      <section className="max-w-6xl mx-auto px-6 py-16" id="contact">
-        <Contact />
-      </section>
-    
-
+      <Contact />
 
     </main>
-
-    
     
     <Footer />
   

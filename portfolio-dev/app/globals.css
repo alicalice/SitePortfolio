@@ -1,13 +1,19 @@
 @import "tailwindcss";
 
+
+/* =========================
+   Base do Design
+========================= */
+
 :root {
   /* base */
   --bg-primary: #0f0f14;
-  --bg-mute: #1a1a2e;
+  --bg-muted: #1a1a2e;
+  --bg-card: #151521;
 
   /* texto */
   --text-primary: #e4e4e7;
-  --text-mute: #a1a1aa;
+  --text-muted: #a1a1aa;
 
   /* identidade lilás */
   --primary: #a78bfa;
@@ -17,6 +23,12 @@
   /* glow */
   --glow-color: 168, 85, 247;
 }
+
+
+/* =========================
+   Tema do Tailwind
+========================= */
+
 @theme inline {
   --color-background: var(--bg-primary);
   --color-foreground: var(--text-primary);
@@ -24,12 +36,9 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-primary: #0f0f14;
-    --text-primary: #e4e4e7;
-  }
-}
+/* =========================
+   Corpo
+========================= */
 
 body {
   color: var(--text-primary);
@@ -37,14 +46,42 @@ body {
   background: linear-gradient(
     to bottom right,
     var(--bg-primary),
-    var(--bg-mute),
+    var(--bg-muted),
     var(--bg-primary)
   );
   background-attachment: fixed;
 }
-/*.container{
 
-}*/
+/* =========================
+   Utilitários - Texto
+========================= */
+
+.text-brand{
+  color:var(--primary);
+}
+.text-brand-soft{
+  color:var(--primary-soft);
+}
+.text-brand-strong{
+  color:var(--primary-strong);
+}
+.text-muted{
+  color:var(--text-muted);
+}
+
+/* =========================
+   Utilitários - Borda
+========================= */
+
+.border-primary {
+  border-color: var(--primary);
+}
+
+
+/* =========================
+   Imagens
+========================= */
+
 .profile-image{
   width:100%;
   height: auto;
@@ -57,21 +94,43 @@ body {
   border-color:var(--primary);
   box-shadow: 0 0 50px rgba(var(--glow-color), 0.55);
 }
-/*.card{
+
+/*.container{
 
 }*/
-.text-brand{
-  color:var(--primary);
+
+
+
+/* =========================
+   Cards
+========================= */
+
+.content-card{
+  background: var(--bg-card);
+  border: 1px solid rgba(var(--glow-color), 0.15);
+  border-radius: 0.75rem;
 }
-.text-brand-soft{
-  color:var(--primary-soft);
+.content-card-interactive{
+  transition: 0.3s ease;
 }
-.text-brand-strong{
-  color:var(--primary-strong);
+.content-card-interactive:hover{
+  border-color: rgb(var(--glow-color),0.4);
+  box-shadow: 0 0 25px rgba(124,58,237,0.25);
+  transform: scale(1.02);
 }
-.text-muted{
-  color:var(--text-mute);
+
+.experience-card{
+  background: rgb(var(--glow-color),0.05);
+  border: 1px solid rgba(var(--glow-color),0.16);
+  border-radius: 0.5rem;
+
 }
+.experience-status{
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
 .skill-tag {
   color: var(--primary);
   background: rgba(var(--glow-color), 0.1);
@@ -79,13 +138,22 @@ body {
   border-radius: 0.5rem;
   transition: 0.2s ease;
 }
-.border-primary {
-  border-color: var(--primary);
-}
+
 .skill-tag:hover {
   background: rgba(var(--glow-color), 0.18);
   border-color: var(--primary);
 }
+
+/* =========================
+   
+========================= */
+
+
+
+/* =========================
+   Efeitos
+========================= */
+
 .glow {
   box-shadow: 0 0 20px rgba(var(--glow-color), 0.15);
   transition: box-shadow 0.3s ease;
@@ -93,3 +161,8 @@ body {
 .glow:hover {
   box-shadow: 0 0 30px rgba(var(--glow-color), 0.35);
 }
+
+
+
+
+

@@ -8,7 +8,7 @@ export default function Hero(){
         className="flex flex-col md:flex-row items-center justify-between gap-12 px-6 max-w-6xl mx-auto mt-24">
             
             <div className="max-w-xl space-y-6">
-                <h3 className="text-brand-soft text-sm uppercase tracking-[0.25em] font-mono">
+                <h3 className="text-brand text-sm uppercase tracking-[0.25em] font-mono">
                     DESENVOLVEDORA FULL STACK
                 </h3>
 
